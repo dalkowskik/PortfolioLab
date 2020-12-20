@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <%--    <link rel="stylesheet" href="<c:url value="../resources/css/style.css" />"/>--%>
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
@@ -29,46 +30,52 @@
                 </ul>
             </li>
         </ul>
+
     </nav>
 
-    <div class="slogan container container--90 imageAdmin">
+
+
+    <section class="help">
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="slogan--item">
-            <h1>
-               Witaj ${user.username}<br />
-                <span class="uppercase"></span>
-            </h1>
 
             <div class="slogan--steps">
-                <div class="slogan--steps-title">Menu:</div>
+
                 <ul class="slogan--steps-boxes1">
                     <a href="<c:url value="/admin/adminDashboard" />" >
-                    <li class="boxeshover">
-                        <div><em>1</em><span>Profil</span></div>
-                    </li>
+                        <li class="boxeshover">
+                            <div><em>1</em><span>Profil</span></div>
+                        </li>
                     </a>
                     <a href="<c:url value="/admin/instytutions" />" >
-                    <li class="boxeshover">
-                        <div><em>2</em><span>Instytucje</span></div>
-                    </li>
+                        <li class="boxeshover">
+                            <div><em>2</em><span>Instytucje</span></div>
+                        </li>
                     </a>
                     <a href="<c:url value="/admin/admins" />" >
-                    <li class="boxeshover">
-                        <div><em>3</em><span>Admini</span></div>
-                    </li>
+                        <li class="boxeshover">
+                            <div><em>3</em><span>Admini</span></div>
+                        </li>
                     </a>
                     <a href="<c:url value="/admin/users" />" >
-                        <li class="boxeshover">
-                            <div><em>4</em><span>Urzytkownicy</span></div>
-                        </li>
+                    <li class="boxeshover">
+                        <div><em>4</em><span>Urzytkownicy</span></div>
+                    </li>
                     </a>
                 </ul>
             </div>
-        </div>
-    </div>
-</header>
-
-
-
-</body>
-</html>
-
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>

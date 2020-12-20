@@ -32,24 +32,18 @@
             </li>
         </ul>
 
-        <ul>
-            <li><a href="index.html" class="btn btn--without-border active">Start</a></li>
-            <li><a href="index.html#steps" class="btn btn--without-border">O co chodzi?</a></li>
-            <li><a href="index.html#about-us" class="btn btn--without-border">O nas</a></li>
-            <li><a href="index.html#help" class="btn btn--without-border">Fundacje i organizacje</a></li>
-            <li><a href="index.html#contact" class="btn btn--without-border">Kontakt</a></li>
-        </ul>
+
     </nav>
 
 <section class="login-page">
-    <h2>Dodaj Instytucje</h2>
+    <h2>Edytuj Urzytkownika</h2>
 
-    <form:form modelAttribute="institution" method="post">
+    <form:form modelAttribute="users" method="post">
         <div class="form-group">
-            <form:input  path="name" type="name" name="name" placeholder="${institution.name}" />
+            <form:input  path="username" placeholder="${user.username}" />
         </div>
         <div class="form-group">
-            <form:input  path="description" type="description" name="description" placeholder="${institution.description}" />
+            <form:input  path="email" placeholder="${user.email}" />
         </div>
 
         <div class="form-group form-group--buttons">

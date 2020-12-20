@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUser(AppUser appUser) {
         appUser.setPassword(appUser.getPassword());
+        appUser.setRoles(appUser.getRoles());
         userRepository.save(appUser);
     }
 
@@ -45,6 +46,15 @@ public class UserServiceImpl implements UserService {
         appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
         appUser.setEnabled(1);
         Role userRole = roleRepository.findByName("ROLE_USER");
+        appUser.setRoles(new HashSet<>(Arrays.asList(userRole)));
+        userRepository.save(appUser);
+    }
+
+
+    public void saveAdmin(AppUser appUser) {
+        appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
+        appUser.setEnabled(1);
+        Role userRole = roleRepository.findByName("ROLE_ADMIN");
         appUser.setRoles(new HashSet<>(Arrays.asList(userRole)));
         userRepository.save(appUser);
     }

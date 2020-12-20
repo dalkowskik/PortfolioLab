@@ -27,8 +27,17 @@ public class Dotation {
     private String phone;
     private LocalTime pickUpTime;
     private String pickUpComment;
+    @ManyToOne
+    private AppUser appUser;
 
 
+    public AppUser getAppUser() {
+        return appUser;
+    }
+
+    public void setAppUser(AppUser appUser) {
+        this.appUser = appUser;
+    }
 
     public long getId() {
         return id;

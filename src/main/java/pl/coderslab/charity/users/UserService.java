@@ -8,6 +8,8 @@ public interface UserService {
     AppUser findByEmail(String email);
     void updateUser(AppUser appUser);
 
+    void saveAdmin(AppUser appUser);
+
 
     void saveUser(AppUser appUser);
 }

@@ -9,5 +9,6 @@ public interface InstitutionRepo extends JpaRepository<Institution, Long> {
 
     Institution findByName(String name);
 
+
    void deleteById(long id);
 }

@@ -1,6 +1,7 @@
 package pl.coderslab.charity.entities;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -15,7 +16,16 @@ public class AppUser {
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Role> roles;
     private int enabled;
+    @OneToMany
+    private List<Dotation> dotation;
 
+    public List<Dotation> getDotation() {
+        return dotation;
+    }
+
+    public void setDotation(List<Dotation> dotation) {
+        this.dotation = dotation;
+    }
 
     public int getEnabled() {
         return enabled;
