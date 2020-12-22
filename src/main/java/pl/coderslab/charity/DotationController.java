@@ -60,6 +60,7 @@ public class DotationController {
         }
         AppUser entityUser = customUser.getAppUser();
         model.addAttribute("user",entityUser);
+        dotation.setAppUser(entityUser);
         return "logged/formConfim";
     }
 
